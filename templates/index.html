@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Customer Support System</h1>
+        </header>
+
+        <form action="/" method="post" class="form">
+            <!-- Language Dropdown -->
+            <div class="form-group">
+                <label for="language">Choose Email Language:</label>
+                <select name="language" id="language">
+                    <option value="en" {% if language == 'en' %}selected{% endif %}>English</option>
+                    <option value="es" {% if language == 'es' %}selected{% endif %}>Spanish</option>
+                    <option value="pt" {% if language == 'pt' %}selected{% endif %}>Portuguese</option>
+                </select>
+            </div>
+
+            <!-- Question Section -->
+            <div class="form-group">
+                <label for="question">Ask a Question about the Product:</label>
+                <textarea id="question" name="question" placeholder="Enter your question here...">{{ question }}</textarea>
+            </div>
+
+            <!-- Answer Section -->
+            <div class="form-group">
+                <label for="answer">Generated Response:</label>
+                <textarea id="answer" name="answer" readonly>{{ answer }}</textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Process</button>
+        </form>
+    </div>
+
+</body>
+</html>

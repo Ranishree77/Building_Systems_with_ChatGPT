@@ -1,0 +1,96 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Header */
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2d5f73;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Labels and Inputs */
+label {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+select,
+textarea {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Textarea Styling */
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Button */
+.submit-button {
+    background-color: #2d5f73;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #1a4a57;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
